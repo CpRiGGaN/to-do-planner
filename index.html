@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo.exe - Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="window" id="app-window">
+        <header class="title-bar">
+            <div class="title-bar-text">
+                📝 todo.exe - Task Manager / Менеджер завдань
+            </div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </header>
+
+        <section class="window-body">
+            <fieldset>
+                <legend>New Task / Нове завдання</legend>
+                <form id="task-form" class="task-form">
+                    <input type="text" id="task-input" class="win98-input" placeholder="What needs to be done? / Що треба зробити?">
+                    
+                    <select id="task-category" class="win98-input">
+                        <option value="study">Учеба / Study</option>
+                        <option value="work">Робота / Work</option>
+                        <option value="personal">Особисте / Personal</option>
+                    </select>
+                    
+                    <button type="submit" class="win98-btn">Add / Додати</button>
+                </form>
+            </fieldset>
+
+            <fieldset>
+                <legend>Task List / Список завдань</legend>
+                <div class="list-container inset-deep">
+                    <ul id="task-list" class="task-list">
+                    </ul>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Done Cart / Кошик виконаного</legend>
+                <div class="progress-bar inset-deep">
+                    <div id="cart-fill" class="progress-fill"></div>
+                </div>
+                <div class="cart-stats">
+                    Tasks in cart / У кошику: <span id="cart-count">0</span> / <span id="total-count">0</span>
+                </div>
+            </fieldset>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
